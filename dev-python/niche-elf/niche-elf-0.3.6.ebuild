@@ -22,6 +22,8 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-build-system.patch
 )
 
+BDEPEND="${DISTUTILS_DEPS}"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
