@@ -20,6 +20,8 @@ python_test() {
 	${EPYTHON} ./tests/decoding_test.py || die
 }
 
+BDEPEND="${DISTUTILS_DEPS}"
+
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
