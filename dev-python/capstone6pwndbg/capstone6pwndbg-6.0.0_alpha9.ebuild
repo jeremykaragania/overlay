@@ -25,13 +25,14 @@ SRC_URI="
 
 S="${WORKDIR}/capstone-${MY_PV}/bindings/python"
 
-PATCHES=(
-	${WORKDIR}/${PN}-tags-v${MY_PV}/python-rename.patch
-)
-
 src_prepare() {
-	pushd "${WORKDIR}/capstone-${MY_PV}" >/dev/null || die
 	default
+	pushd "${WORKDIR}/${PN}-tags-v${MY_PV}" >/dev/null || die
+	eapply "${FILESDIR}/${P}-fix-patches.patch"
+	popd >/dev/null || die
+
+	pushd "${WORKDIR}/capstone-${MY_PV}" >/dev/null || die
+	eapply "${WORKDIR}/${PN}-tags-v${MY_PV}/python-rename.patch"
 	popd >/dev/null || die
 }
 

@@ -1,0 +1,18 @@
+diff --git a/python-rename.patch b/python-rename.patch
+index c895cc2..23df703 100644
+--- a/python-rename.patch
++++ b/python-rename.patch
+@@ -1,13 +1,3 @@
+-diff --git a/pkgconfig.mk b/pkgconfig.mk
+-index dummy..dummy2 100644
+---- a/pkgconfig.mk
+-+++ b/pkgconfig.mk
+-@@ -9,4 +9,4 @@
+- PKG_EXTRA = 0
+-
+- # version tag. Examples: rc1, b2, post1 - or just comment out for no tag
+--PKG_TAG = alpha7
+-+PKG_TAG = alpha8
+ diff --git a/bindings/python/pyproject.toml b/bindings/python/pyproject.toml
+ index 3906c861..116e7478 100644
+ --- a/bindings/python/pyproject.toml
